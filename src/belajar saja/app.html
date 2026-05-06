@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Study</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<div class="nav">
+    <h2>📚 Smart Study</h2>
+    <button onclick="logout()">Logout</button>
+</div>
+
+<div class="wrap">
+
+    <div class="card">
+        <h3>⏰ Tambah Jadwal Belajar</h3>
+        <input type="time" id="studyTime">
+        <input type="text" id="studySubject" placeholder="Materi belajar">
+        <button onclick="tambahJadwalBelajar()">Tambah</button>
+        <div id="studyList"></div>
+    </div>
+
+    <div class="card">
+        <h3>📅 Jadwal Sekolah Besok</h3>
+        <textarea id="scheduleInput"></textarea>
+        <button onclick="saveSchedule()">Simpan</button>
+        <p id="tomorrowSchedule"></p>
+    </div>
+
+    <div class="card">
+        <h3>📈 Progress Belajar</h3>
+        <progress id="progressBar" value="0" max="100"></progress>
+        <p id="progressText">0%</p>
+    </div>
+
+    <div class="card">
+        <h3>🔔 Tes Notifikasi</h3>
+        <button onclick="showNotification('Tes', 'Notifikasi berhasil')">Tes</button>
+    </div>
+
+</div>
+
+<script src="auth.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

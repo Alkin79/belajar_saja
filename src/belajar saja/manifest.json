@@ -1,0 +1,8 @@
+{
+  "name":"Smart Study",
+  "short_name":"Study",
+  "start_url":"login.html",
+  "display":"standalone",
+  "background_color":"#eef2ff",
+  "theme_color":"#4f46e5"
+}

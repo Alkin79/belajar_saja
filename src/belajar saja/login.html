@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Study Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4f46e5">
+</head>
+<body class="login-body">
+
+<div class="login-container">
+
+    <div class="card" id="loginBox">
+        <h2>📚 Smart Study</h2>
+        <input type="text" id="loginUsername" placeholder="Username">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p>Belum punya akun? <span onclick="showRegister()">Daftar</span></p>
+    </div>
+
+    <div class="card hidden" id="registerBox">
+        <h2>📝 Register</h2>
+        <input type="text" id="regUsername" placeholder="Username">
+        <input type="password" id="regPassword" placeholder="Password">
+        <input type="password" id="regConfirm" placeholder="Konfirmasi Password">
+        <button onclick="register()">Buat Akun</button>
+        <p>Sudah punya akun? <span onclick="showLogin()">Login</span></p>
+    </div>
+
+</div>
+
+<script src="auth.js"></script>
+<script>
+    if('serviceWorker' in navigator){
+        navigator.serviceWorker.register('service-worker.js');
+    }
+</script>
+</body>
+</html>
